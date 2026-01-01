@@ -9,11 +9,15 @@ def home():
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    phno= "12345431"
+    email= "notes@gmail.com"
+    return render_template("contact.html",phno=phno,email=email)
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    username = "Bikram123"
+    return render_template("about.html",name=username) #sending data to the frontend 
+        #catching data in about.html
 
 
 if __name__ == "__main__":
