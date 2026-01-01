@@ -1,19 +1,19 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app= Flask(__name__)
 
 @app.route("/") #base route or home route 
 def home():
-    return "welcome to the home page of the notes app"
+    return render_template("home.html")
 
 
 @app.route("/contact")
 def contact():
-    return "<h2> contact us at official @sgmail.com </h2>"
+    return render_template("contact.html")
 
 @app.route("/about")
 def about():
-    return "<h3> Hi i am bikram gorai ,a second yaer student at AEC </h3>"
+    return render_template("about.html")
 
 
 if __name__ == "__main__":
